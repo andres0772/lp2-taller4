@@ -9,6 +9,7 @@ Grid = web.export(mui, "Grid")
 Paper = web.export(mui, "Paper")
 Box = web.export(mui, "Box")
 Typography = web.export(mui, "Typography")
+Rating = web.export(mui, "Rating")
 
 
 def tarjetas(productos):
@@ -28,6 +29,13 @@ def tarjetas(productos):
         Box(
                 {"sx": {"bgcolor": "background.paper"}},
               Typography({"variant": "h5"},(producto['nombre']),
+              Rating({
+                "readOnly": True, 
+                "name": "half-rating", 
+                "precision": "0.5",
+                "value": producto['Rating']
+                }),
+              
               Typography({"variant": "boddy2"},(producto['descripcion']),
               Typography({"variant": "h5"},(producto['precio']),
 
