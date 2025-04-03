@@ -1,12 +1,13 @@
 from reactpy import component, html
-from reactpy.backend.Flask import configure
-from Flask import Flask
+from reactpy.backend.flask import configure
+from flask import Flask
 
 @component
 def app():
-    return html.hl("hello, world!")
+    return html.h1("Hello, world!")
 
+flask_app = Flask(__name__)
+configure(flask_app, app)
 
-app = Flask(__name__)
- configure(app, App)
- app.run(host='0.0.0.0', debug=True)
+if __name__ == '__main__':
+    flask_app.run(host='0.0.0.0', debug=True)
