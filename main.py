@@ -1,6 +1,6 @@
-from reactpy import componeent, html
-from reactpy.backend.flask import configure
-from flask import flask
+from reactpy import component, html
+from reactpy.backend.Flask import configure
+from Flask import Flask
 
 @component
 def app():
