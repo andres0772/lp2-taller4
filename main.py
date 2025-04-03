@@ -8,7 +8,7 @@ Container = web.export(mui, "Container")
 Grid = web.export(mui, "Grid")
 Paper = web.export(mui, "Paper")
 Box = web.export(mui, "Box")
-typography = web.export(mui, "typography")
+Typography = web.export(mui, "Typography")
 
 
 def tarjetas(productos):
@@ -27,9 +27,9 @@ def tarjetas(productos):
         ),
         Box(
                 {"sx": {"bgcolor": "background.paper"}},
-              typography({"variant": "h5"},(producto['nombre']),
-              typography({"variant": "boddy2"},(producto['descripcion']),
-              typography({"variant": "h5"},(producto['precio']),
+              Typography({"variant": "h5"},(producto['nombre']),
+              Typography({"variant": "boddy2"},(producto['descripcion']),
+              Typography({"variant": "h5"},(producto['precio']),
 
               )
             )
