@@ -1,3 +1,4 @@
 flask
-pandas
-matplotlib
+reactpy
+flask-cors
+flask-sock
